@@ -77,7 +77,7 @@ class BBTree(BaseEstimator, TransformerMixin):
             )
             if not self.check_stop_criteria(node, labels):
                 if len(prototypes) > 1:
-                    node.define_frames(prototypes, thresholds)
+                    node.define_frames(prototypes)
                 # when feature space is not fractured the method creates no node for current feature span 
                 # and retrieves another feature to analyse
                 if len(node.frames) == 2:
